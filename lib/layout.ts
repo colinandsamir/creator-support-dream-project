@@ -1,5 +1,5 @@
 // Shared layout primitives: lerp params and nav positions.
-// Imported by Canvas (homepage scaled scene) and FluidNav (used on other pages)
+// Imported by the homepage's scaled scene and FluidNav (used on other pages)
 // so the nav renders at IDENTICAL screen positions across the site.
 
 export const DESKTOP_W = 1440;
@@ -26,9 +26,9 @@ export function frameScale(vw: number, t: number): { frameW: number; scale: numb
 }
 
 // Nav chrome positions — desktop coords / mobile coords.
-// viewNav/applyNav belong to the live homepage and the nav on /submissions and
-// /terms; winnerNav belongs to the announcement draft. Both sets live here until
-// the draft replaces the homepage, at which point the first two can go.
+// winnerNav is what the homepage and the nav on /submissions and /terms render
+// now. viewNav/applyNav are parked alongside components/Canvas.tsx, for when
+// applications reopen and the apply homepage comes back.
 export const NAV = {
   logo:     { d: { x: 45,   y: 38, w: 125, h: 44 }, m: { x: 26,  y: 28, w: 108, h: 38 } },
   adobe:    { d: { x: 200,  y: 36, w: 94,  h: 51 }, m: { x: 150, y: 27, w: 77,  h: 42 } },

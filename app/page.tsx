@@ -1,9 +1,13 @@
-import Canvas from "@/components/Canvas";
+import WinnerCanvas from "@/components/WinnerCanvas";
 
-// Rendered per request so the first visit after the applications cutoff
-// already shows the closed buttons, with no deploy or rebuild needed.
-export const dynamic = "force-dynamic";
-
+/**
+ * The winner announcement, live on the homepage.
+ *
+ * components/Canvas.tsx — the apply-for-the-fund homepage this replaces — is
+ * kept as-is rather than deleted: the page itself says applications are
+ * reopening, so it comes back. lib/applications.ts and NAV.viewNav/applyNav
+ * are parked with it for the same reason.
+ */
 export default function Page() {
-  return <Canvas />;
+  return <WinnerCanvas />;
 }
